@@ -926,7 +926,7 @@ We use libextobjc macros [@weakify/@strongify](http://aceontech.com/objc/ios/201
 ```
 ## Type Inference
 
-Since Xcode 8 we can use __auto_type for type inference in Objective-C. We can mix use of __auto_type in our code with usual type defenition.
+Since Xcode 8 we can use __auto_type for type inference in Objective-C. We can mix use of __auto_type in our code with usual type definition.
 ```objc
 - (void)sendSomeNetworkRequest {
     __auto_type completion = ^(NSError *_Nullable error) {
