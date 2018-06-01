@@ -1,3 +1,5 @@
+# THIS REPO IS DEPRECATED, PLEASE USE [IOS-GUIDELINES](https://github.com/badoo/ios-guidelines)
+
 # Badoo Objective-C Style Guide
 
 This style guide outlines the coding conventions used at [Badoo](http://badoo.com). This style guide is based on the [NYTimes Objective-C Style Guide](https://github.com/NYTimes/objetive-c-style-guide).
