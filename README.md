@@ -40,6 +40,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Images](#images)
 * [Booleans](#booleans)
 * [Blocks](#blocks)
+* [Type inference](#type-inference)
 * [Singletons](#singletons)
 * [Unit Tests](#unit-tests)
 * [Xcode Project](#xcode-project)
@@ -924,6 +925,20 @@ We use libextobjc macros [@weakify/@strongify](http://aceontech.com/objc/ios/201
     [self updateTableViewContentInsets];
     [self updateScrollIndicatorInsets];
 }];
+```
+## Type Inference
+
+Since Xcode 8 we can use __auto_type for type inference in Objective-C. We can mix use of __auto_type in our code with usual type definition.
+```objc
+- (void)sendSomeNetworkRequest {
+    __auto_type completion = ^(NSError *_Nullable error) {
+        if (error) {
+            [self handleSomeNetworkRequestError:error];
+        }
+    };
+    __auto_type someNetworkRequest = [self makeSomeNetworkRequest];
+    [self.networkService sendRequest:someNetworkRequest completion:completion];
+}
 ```
 
 ## Singletons
